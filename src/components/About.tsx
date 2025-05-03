@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BookOpen, Award, GraduationCap, Basketball, Users, Atom, Dna, Lightbulb, School } from 'lucide-react';
+import { BookOpen, Award, GraduationCap, Activity, Users, Atom, Dna, Lightbulb, School } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
@@ -32,7 +32,7 @@ const About = () => {
       description: "Maintained exceptional academic standing while pursuing advanced coursework and independent research initiatives."
     },
     {
-      icon: <Basketball className="h-8 w-8 text-quantum-accent" />,
+      icon: <Activity className="h-8 w-8 text-quantum-accent" />,
       title: "Athletic Pursuits",
       description: "Active basketball player, applying the discipline and strategic thinking from sports to academic challenges."
     },
