@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
 
-## Project info
+# Academic Portfolio Website
 
-**URL**: https://lovable.dev/projects/4d217ae0-1352-4974-8b0e-78d435755b88
+## Project Overview
+This project is an academic portfolio website showcasing interdisciplinary research across quantum physics, artificial intelligence, and Tamil philosophy. The site is designed to highlight academic achievements, research projects, publications, and provide contact information for collaboration opportunities.
 
-## How can I edit this code?
+## Features
+- Responsive design optimized for all devices
+- Interactive research section with tabbed categories
+- Project showcase with visual cards
+- Publications listing with download options
+- Contact form for inquiries
+- Smooth scrolling navigation
 
-There are several ways of editing your application.
+## Technology Stack
+- React with TypeScript
+- Tailwind CSS for styling
+- Shadcn UI components
+- React Router for navigation
+- React Query for data management
 
-**Use Lovable**
+## Getting Started
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4d217ae0-1352-4974-8b0e-78d435755b88) and start prompting.
+### Prerequisites
+- Node.js & npm
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### Installation
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone <repository-url>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project directory
+cd academic-portfolio
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
+- `src/components` - Reusable UI components
+- `src/pages` - Page components for routing
+- `src/hooks` - Custom React hooks
+- `src/lib` - Utility functions
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Customization
+The website can be easily customized by modifying:
+- Content in component files
+- Colors in the Tailwind configuration
+- Images and personal information
 
-**Use GitHub Codespaces**
+## License
+This project is open source and available under the [MIT License](LICENSE).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4d217ae0-1352-4974-8b0e-78d435755b88) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Contact
+For any questions or collaboration opportunities, please reach out through the contact form on the website.
