@@ -5,7 +5,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Research from '@/components/Research';
 import Projects from '@/components/Projects';
-import Publications from '@/components/Publications';
+// import Publications from '@/components/Publications';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -42,7 +42,7 @@ const Index = () => {
       <About />
       <Research />
       <Projects />
-      <Publications />
+      {/* <Publications /> */}
       <Contact />
       <Footer />
     </div>

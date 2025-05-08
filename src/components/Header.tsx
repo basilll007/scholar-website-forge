@@ -23,11 +23,11 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   
   const menuItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Research', href: '#research' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Publications', href: '#publications' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'About', href: '/#about' },
+    { name: 'Research', href: '/#research' },
+    { name: 'Projects', href: '/#projects' },
+    { name: 'Achievements', href: '/achievements' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (

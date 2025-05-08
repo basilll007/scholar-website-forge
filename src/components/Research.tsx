@@ -91,12 +91,12 @@ const Research = () => {
                   ))}
                 </ul>
                 
-                <Button
+                {/* <Button
                   variant="outline"
                   className="border-quantum text-quantum hover:bg-quantum hover:text-white"
                 >
                   Explore Publications
-                </Button>
+                </Button> */}
               </div>
             </TabsContent>
           ))}

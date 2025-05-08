@@ -19,7 +19,7 @@ const Contact = () => {
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h2 className="section-title">Get in Touch</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            I'm always interested in collaborating on research projects, speaking opportunities, or discussing ideas related to quantum physics, artificial intelligence, and philosophical inquiry.
+            I'm always interested in collaborating on research projects, speaking opportunities, or discussing ideas related to quantum physics, artificial intelligence, and Biology inquiry.
           </p>
         </div>
         
@@ -34,7 +34,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-gray-600">researcher@example.com</p>
+                  <p className="text-gray-600">basiltamilselvan8@gmail.com</p>
                 </div>
               </div>
               
