@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { BookOpen, Award, GraduationCap, Activity, Users, Atom, Dna, Lightbulb, School } from 'lucide-react';
+import { BookOpen, Award, GraduationCap, Activity, Users, Atom, Dna, Lightbulb, School, Briefcase, Code, Database, FileCode } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
@@ -61,6 +60,37 @@ const About = () => {
     }
   ];
 
+  const experience = [
+    {
+      position: "AI Engineer",
+      company: "6F Tech Consultant",
+      period: "July 2024 - November 2024",
+      icon: <FileCode className="h-6 w-6 text-quantum-accent" />,
+      description: "Developed and deployed chatbot solutions using Python and Django. Collaborated with cross-functional teams to implement AI-powered features and ensure smooth integration with existing systems.",
+    },
+    {
+      position: "Software Developer Associate",
+      company: "AG Media",
+      period: "January 2024 - June 2024",
+      icon: <Code className="h-6 w-6 text-quantum-accent" />,
+      description: "Developed responsive websites using WordPress for various clients. Ensured timely delivery of projects while maintaining high quality standards and client satisfaction.",
+    },
+    {
+      position: "Data Science Intern",
+      company: "Coders Cave",
+      period: "August 2023",
+      icon: <Database className="h-6 w-6 text-quantum-accent" />,
+      description: "Explored various data science methodologies and techniques. Conducted Exploratory Data Analysis (EDA) on complex datasets and developed predictive models using machine learning algorithms.",
+    },
+    {
+      position: "Product Owner",
+      company: "Priga Solutions",
+      period: "January 2023 - July 2023", 
+      icon: <Briefcase className="h-6 w-6 text-quantum-accent" />,
+      description: "Led a team of developers through the complete product lifecycle of the Grocy web application. Successfully launched the product, ensuring it met all specifications and user requirements.",
+    },
+  ];
+
   return (
     <section id="about" className="content-section bg-white py-16">
       <div className="container mx-auto px-4">
@@ -83,6 +113,27 @@ const About = () => {
                   <h3 className="text-lg font-semibold mb-1">{edu.degree}</h3>
                   <p className="text-gray-700 mb-1">{edu.institution}</p>
                   <p className="text-gray-500 text-sm">{edu.period}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <h3 className="text-xl font-semibold mb-6 text-center">Professional Experience</h3>
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
+          {experience.map((exp, index) => (
+            <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-start">
+                  <div className="mr-4 p-3 bg-blue-50 rounded-full">
+                    {exp.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1">{exp.position}</h3>
+                    <p className="text-quantum-accent font-medium mb-1">{exp.company}</p>
+                    <p className="text-gray-500 text-sm mb-2">{exp.period}</p>
+                    <p className="text-gray-600">{exp.description}</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
