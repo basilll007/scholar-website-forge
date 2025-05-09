@@ -27,6 +27,10 @@ const Hero = () => {
                 variant="default"
                 className="bg-quantum-dark hover:bg-quantum text-white"
                 size="lg"
+                onClick={() => {
+                  const researchSection = document.getElementById('research');
+                  if (researchSection) researchSection.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 View Research
               </Button>
@@ -35,6 +39,10 @@ const Hero = () => {
                 variant="outline"
                 className="border-quantum-dark text-quantum-dark hover:bg-quantum-dark/10"
                 size="lg"
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Connect
               </Button>

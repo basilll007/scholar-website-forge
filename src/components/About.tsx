@@ -66,7 +66,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h2 className="section-title mb-6">About Me</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed text-justify">
             I'm a curious explorer at the intersection of artificial intelligence and fundamental sciences, currently pursuing my Master's in Applied AI at Purdue University Northwest. With a background in Computer Science and a passion for interdisciplinary research, I'm fascinated by how computational approaches can unlock new insights in quantum physics and biological systems. As both an academic and an athlete, I bring discipline, teamwork, and creative problem-solving to every challenge.
           </p>
         </div>
