@@ -17,6 +17,8 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { useSupabaseClient } from '@/hooks/useSupabaseClient';
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
+import { MessageCircle } from 'lucide-react';
 
 // Form validation schema
 const contactFormSchema = z.object({
@@ -30,7 +32,8 @@ export type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const ContactForm: React.FC = () => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
-  const { supabase } = useSupabaseClient();
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const { supabase, isConfigured } = useSupabaseClient();
   
   // Initialize form with react-hook-form and zod validation
   const form = useForm<ContactFormValues>({
@@ -45,11 +48,12 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (values: ContactFormValues) => {
     setStatus('sending');
+    setErrorMessage(null);
     
     try {
       // Check if Supabase is properly configured
-      if (!supabase) {
-        throw new Error("Supabase configuration is missing. Please check your environment variables.");
+      if (!isConfigured) {
+        throw new Error("Supabase is not configured. Please ensure your environment variables are set correctly.");
       }
 
       // Call Supabase Edge Function to send email
@@ -70,6 +74,14 @@ const ContactForm: React.FC = () => {
     } catch (err) {
       console.error('Error sending message:', err);
       setStatus('error');
+      
+      // Set a specific error message
+      if (err instanceof Error) {
+        setErrorMessage(err.message);
+      } else {
+        setErrorMessage("An unknown error occurred. Please try again later.");
+      }
+      
       toast({
         title: "Failed to send message",
         description: "There was an issue sending your message. Please try again later.",
@@ -77,6 +89,27 @@ const ContactForm: React.FC = () => {
       });
     }
   };
+
+  // Show configuration error if Supabase is not configured
+  if (!isConfigured) {
+    return (
+      <Card className="border-none shadow-lg">
+        <CardContent className="p-6">
+          <Alert className="mb-4 border-red-500 bg-red-50">
+            <MessageCircle className="h-4 w-4 text-red-600" />
+            <AlertTitle className="text-red-600">Configuration Error</AlertTitle>
+            <AlertDescription className="text-red-600">
+              Supabase is not configured properly. Please ensure the VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY 
+              environment variables are set correctly in your Supabase project.
+            </AlertDescription>
+          </Alert>
+          <p className="text-center text-gray-500">
+            The contact form is temporarily unavailable. Please try again later or reach out directly via email.
+          </p>
+        </CardContent>
+      </Card>
+    );
+  }
 
   return (
     <Card className="border-none shadow-lg">
@@ -142,11 +175,19 @@ const ContactForm: React.FC = () => {
                 </FormItem>
               )}
             />
+            
+            {errorMessage && (
+              <Alert className="bg-red-50 border-red-200">
+                <AlertDescription className="text-red-600">
+                  {errorMessage}
+                </AlertDescription>
+              </Alert>
+            )}
+            
             <Button type="submit" className="w-full bg-quantum-dark hover:bg-quantum text-white" disabled={status === 'sending'}>
               {status === 'sending' ? 'Sending...' : 'Send Message'}
             </Button>
             {status === 'success' && <p className="text-green-600 text-center mt-2">Message sent successfully!</p>}
-            {status === 'error' && <p className="text-red-600 text-center mt-2">Failed to send message. Please try again later.</p>}
           </form>
         </Form>
       </CardContent>
