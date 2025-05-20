@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, MessageSquare, MapPin, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -19,10 +18,14 @@ import {
 } from '@/components/ui/form';
 import { createClient } from '@supabase/supabase-js';
 
-// Initialize Supabase client
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Initialize Supabase client with proper error handling
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+// Create supabase client only if URL and key are available
+const supabase = (supabaseUrl && supabaseAnonKey) 
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null;
 
 // Form validation schema
 const contactFormSchema = z.object({
@@ -52,6 +55,11 @@ const Contact = () => {
     setStatus('sending');
     
     try {
+      // Check if Supabase is properly configured
+      if (!supabase) {
+        throw new Error("Supabase configuration is missing. Please check your environment variables.");
+      }
+
       // Call Supabase Edge Function to send email
       const { error } = await supabase.functions.invoke('send-contact-email', {
         body: JSON.stringify(values)
