@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/form';
 import { useSupabaseClient } from '@/hooks/useSupabaseClient';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
-import { MessageCircle } from 'lucide-react';
+import { Send, Loader } from 'lucide-react';
 
 // Form validation schema
 const contactFormSchema = z.object({
@@ -51,15 +51,15 @@ const ContactForm: React.FC = () => {
     setErrorMessage(null);
     
     try {
-      // Check if Supabase is properly configured
-      if (!isConfigured) {
-        throw new Error("Supabase is not configured. Please ensure your environment variables are set correctly.");
-      }
-
+      console.log('Submitting form with values:', values);
+      console.log('Supabase client:', supabase);
+      
       // Call Supabase Edge Function to send email
-      const { error } = await supabase.functions.invoke('send-contact-email', {
+      const { error, data } = await supabase.functions.invoke('send-contact-email', {
         body: JSON.stringify(values)
       });
+
+      console.log('Response from function:', { error, data });
 
       if (error) {
         throw new Error(error.message);
@@ -90,13 +90,12 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  // Show configuration error if Supabase is not configured
+  // Show configuration error if somehow Supabase is still not configured
   if (!isConfigured) {
     return (
       <Card className="border-none shadow-lg">
         <CardContent className="p-6">
           <Alert className="mb-4 border-red-500 bg-red-50">
-            <MessageCircle className="h-4 w-4 text-red-600" />
             <AlertTitle className="text-red-600">Configuration Error</AlertTitle>
             <AlertDescription className="text-red-600">
               Supabase is not configured properly. Please ensure the VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY 
@@ -184,10 +183,31 @@ const ContactForm: React.FC = () => {
               </Alert>
             )}
             
-            <Button type="submit" className="w-full bg-quantum-dark hover:bg-quantum text-white" disabled={status === 'sending'}>
-              {status === 'sending' ? 'Sending...' : 'Send Message'}
+            <Button 
+              type="submit" 
+              className="w-full bg-quantum-dark hover:bg-quantum text-white" 
+              disabled={status === 'sending'}
+            >
+              {status === 'sending' ? (
+                <>
+                  <Loader className="mr-2 h-4 w-4 animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <Send className="mr-2 h-4 w-4" />
+                  Send Message
+                </>
+              )}
             </Button>
-            {status === 'success' && <p className="text-green-600 text-center mt-2">Message sent successfully!</p>}
+            
+            {status === 'success' && (
+              <Alert className="bg-green-50 border-green-200">
+                <AlertDescription className="text-green-600">
+                  Your message has been sent successfully! I'll get back to you soon.
+                </AlertDescription>
+              </Alert>
+            )}
           </form>
         </Form>
       </CardContent>
