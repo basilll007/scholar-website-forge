@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
@@ -8,7 +7,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { CalendarDays, ArrowLeft, Tag, UserCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button'; // Added Button import
+import { CalendarDays, ArrowLeft } from 'lucide-react'; // Removed unused Tag and UserCircle
 import Footer from '@/components/Footer'; 
 // Assuming you might want a consistent footer.
 
@@ -118,4 +118,3 @@ const BlogPostPage: React.FC = () => {
 };
 
 export default BlogPostPage;
-
