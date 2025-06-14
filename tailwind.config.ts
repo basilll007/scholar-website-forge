@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -11,7 +10,8 @@ export default {
 	],
 	prefix: "",
 	theme: {
-		container: {
+		
+    container: {
 			center: true,
 			padding: '2rem',
 			screens: {
@@ -19,7 +19,8 @@ export default {
 			}
 		},
 		extend: {
-			colors: {
+      
+      colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -118,5 +119,8 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography")
+  ],
 } satisfies Config;
