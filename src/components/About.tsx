@@ -63,6 +63,13 @@ const About = () => {
   const experience = [
     {
       position: "AI Engineer",
+      company: "H1 Enterprise",
+      period: "Nov 2024 – Jun 2025",
+      icon: <FileCode className="h-6 w-6 text-quantum-accent" />,
+      description: "Led R&D on AI applications in agriculture, focusing on yield prediction and pest detection. Designed and developed an industrial chatbot that enhanced client query resolution efficiency.",
+    },
+    {
+      position: "AI Engineer",
       company: "6F Tech Consultant",
       period: "July 2024 - November 2024",
       icon: <FileCode className="h-6 w-6 text-quantum-accent" />,

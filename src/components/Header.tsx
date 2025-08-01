@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,7 +44,7 @@ const Header = () => {
         </a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex items-center space-x-8">
           {menuItems.map((item) => (
             <a 
               key={item.name}
@@ -53,6 +54,15 @@ const Header = () => {
               {item.name}
             </a>
           ))}
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="border-quantum text-quantum hover:bg-quantum hover:text-white flex items-center gap-2"
+            onClick={() => window.open('/Basil_resume.pdf', '_blank')}
+          >
+            <Download size={16} />
+            Resume
+          </Button>
         </nav>
         
         {/* Mobile Menu Button */}
@@ -86,6 +96,18 @@ const Header = () => {
               {item.name}
             </a>
           ))}
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="border-quantum text-quantum hover:bg-quantum hover:text-white flex items-center gap-2 mt-4"
+            onClick={() => {
+              window.open('/resume.pdf', '_blank');
+              toggleMenu();
+            }}
+          >
+            <Download size={20} />
+            Download Resume
+          </Button>
         </nav>
       </div>
     </header>

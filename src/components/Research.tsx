@@ -29,17 +29,6 @@ const Research = () => {
       ]
     },
     {
-      id: "philosophy",
-      title: "Tamil Philosophy",
-      description: "Investigating ancient Tamil philosophical concepts and their surprising parallels to modern scientific frameworks. This research explores how traditional knowledge systems conceptualized the nature of reality in ways that sometimes anticipate contemporary physics.",
-      topics: [
-        "Epistemological Foundations",
-        "Comparative Philosophy of Science",
-        "Metaphysical Frameworks",
-        "Knowledge Representation Systems"
-      ]
-    },
-    {
       id: "interdisciplinary",
       title: "Interdisciplinary Approaches",
       description: "Creating frameworks that integrate methods and insights across disciplines. This research aims to develop new methodologies that allow for richer understanding of complex phenomena through intentional boundary-crossing.",
@@ -63,7 +52,7 @@ const Research = () => {
         </div>
         
         <Tabs defaultValue="quantum" className="w-full">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-8">
+          <TabsList className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-8">
             {researchAreas.map(area => (
               <TabsTrigger 
                 key={area.id}
