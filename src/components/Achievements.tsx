@@ -52,7 +52,7 @@ const Achievements = () => {
     {
       title: "Smart India Hackathon – Grand Finale Participant",
       organization: "Government of India",
-      year: "2024",
+      year: "2022",
       description: [
         "Selected among top national teams for building a real-time AI-based network traffic analyzer.",
         "Represented the college in the national-level grand finale."
