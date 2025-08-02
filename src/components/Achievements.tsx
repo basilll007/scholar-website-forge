@@ -2,8 +2,11 @@ import React from 'react';
 import { Award, Trophy, Medal, Users } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Achievements = () => {
+  const { ref: achievementsRef, isVisible: achievementsVisible } = useScrollAnimation();
+
   const achievements = [
     {
       title: "Gold Medal – Best All-Rounder",
@@ -79,14 +82,18 @@ const Achievements = () => {
             {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-quantum-light hidden md:block"></div>
             
-            <div className="space-y-8">
+            <div ref={achievementsRef} className="space-y-8">
               {achievements.map((achievement, index) => {
                 const IconComponent = achievement.icon;
                 return (
                   <div 
                     key={index} 
-                    className="relative group animate-fade-in"
-                    style={{ animationDelay: `${index * 0.2}s` }}
+                    className={`relative group transition-all duration-700 transform ${
+                      achievementsVisible 
+                        ? 'translate-y-0 opacity-100' 
+                        : 'translate-y-8 opacity-0'
+                    }`}
+                    style={{ transitionDelay: `${index * 200}ms` }}
                   >
                     {/* Timeline dot */}
                     <div className="absolute left-6 top-6 w-4 h-4 bg-quantum rounded-full border-4 border-white shadow-lg hidden md:block z-10"></div>

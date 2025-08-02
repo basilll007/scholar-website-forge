@@ -1,8 +1,13 @@
 import React from 'react';
 import { BookOpen, Award, GraduationCap, Activity, Users, Atom, Dna, Lightbulb, School, Briefcase, Code, Database, FileCode } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const About = () => {
+  const { ref: educationRef, isVisible: educationVisible } = useScrollAnimation();
+  const { ref: experienceRef, isVisible: experienceVisible } = useScrollAnimation();
+  const { ref: achievementsRef, isVisible: achievementsVisible } = useScrollAnimation();
+
   const education = [
     {
       degree: "MS in Applied Artificial Intelligence",
@@ -109,9 +114,17 @@ const About = () => {
         </div>
         
         <h3 className="text-xl font-semibold mb-6 text-center">Educational Journey</h3>
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div ref={educationRef} className="grid md:grid-cols-3 gap-6 mb-16">
           {education.map((edu, index) => (
-            <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
+            <Card 
+              key={index} 
+              className={`border-none shadow-md hover:shadow-lg transition-all duration-700 transform ${
+                educationVisible 
+                  ? 'translate-y-0 opacity-100' 
+                  : 'translate-y-8 opacity-0'
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
               <CardContent className="p-6">
                 <div className="flex flex-col items-center text-center">
                   <div className="mb-4 p-3 bg-blue-50 rounded-full">
@@ -127,9 +140,17 @@ const About = () => {
         </div>
 
         <h3 className="text-xl font-semibold mb-6 text-center">Professional Experience</h3>
-        <div className="grid md:grid-cols-2 gap-6 mb-16">
+        <div ref={experienceRef} className="grid md:grid-cols-2 gap-6 mb-16">
           {experience.map((exp, index) => (
-            <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
+            <Card 
+              key={index} 
+              className={`border-none shadow-md hover:shadow-lg transition-all duration-700 transform ${
+                experienceVisible 
+                  ? 'translate-y-0 opacity-100' 
+                  : 'translate-y-8 opacity-0'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
               <CardContent className="p-6">
                 <div className="flex items-start">
                   <div className="mr-4 p-3 bg-blue-50 rounded-full">
@@ -148,9 +169,17 @@ const About = () => {
         </div>
         
         <h3 className="text-xl font-semibold mb-6 text-center">Personal Strengths</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div ref={achievementsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {achievements.map((achievement, index) => (
-            <Card key={index} className="card-gradient border-none shadow-md hover:shadow-lg transition-shadow">
+            <Card 
+              key={index} 
+              className={`card-gradient border-none shadow-md hover:shadow-lg transition-all duration-700 transform ${
+                achievementsVisible 
+                  ? 'translate-y-0 opacity-100' 
+                  : 'translate-y-8 opacity-0'
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
               <CardContent className="p-6">
                 <div className="flex flex-col items-center text-center">
                   <div className="mb-4 p-3 bg-blue-50 rounded-full">

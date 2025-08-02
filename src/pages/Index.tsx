@@ -9,6 +9,7 @@ import Achievements from '@/components/Achievements';
 // import Publications from '@/components/Publications';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Analytics from '@/components/Analytics';
 
 const Index = () => {
   useEffect(() => {
@@ -47,6 +48,7 @@ const Index = () => {
       {/* <Publications /> */}
       <Contact />
       <Footer />
+      {/* <Analytics /> */}
     </div>
   );
 };
