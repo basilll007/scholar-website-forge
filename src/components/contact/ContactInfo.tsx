@@ -22,26 +22,7 @@ const ContactInfo: React.FC = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-1">Location</h4>
-            <p className="text-gray-600">Department of Applied Artificial Intelligence, <span>Purdue University Northwest</span> Purdue University Northwest</p>
-          </div>
-        </div>
-        <div className="flex items-start">
-          <div className="mr-4 p-3 bg-blue-50 rounded-full">
-            <MessageSquare className="h-6 w-6 text-quantum-accent" />
-          </div>
-          <div>
-            <h4 className="font-semibold mb-1">Academic Profiles</h4>
-            <div className="space-y-1">
-              <a href="#" className="flex items-center text-quantum hover:text-quantum-accent">
-                Google Scholar <ExternalLink className="ml-1 h-3 w-3" />
-              </a>
-              <a href="#" className="flex items-center text-quantum hover:text-quantum-accent">
-                ResearchGate <ExternalLink className="ml-1 h-3 w-3" />
-              </a>
-              <a href="https://orcid.org/0009-0006-2314-9352" className="flex items-center text-quantum hover:text-quantum-accent">
-                ORCID <ExternalLink className="ml-1 h-3 w-3" />
-              </a>
-            </div>
+            <p className="text-gray-600">Department of Applied Artificial Intelligence, Purdue University Northwest</p>
           </div>
         </div>
       </div>

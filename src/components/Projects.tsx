@@ -25,7 +25,7 @@ const Projects = () => {
       description: "Applied pre-trained CNNs to classify lichen species from raw image datasets using advanced transfer learning techniques.",
       detailedDescription: "This biodiversity research project focuses on automated identification of lichen species using computer vision. I implemented transfer learning with pre-trained models including ResNet50, VGG16, and EfficientNet, fine-tuning them on a custom dataset of over 10,000 lichen images across 50+ species. To address class imbalance, I employed advanced data augmentation techniques including rotation, scaling, color jittering, and mixup. The final ensemble model achieved 94% accuracy on the test set. The research contributes to ecological monitoring and biodiversity assessment, with the paper currently under review for publication in the Journal of Computer Science and Agriculture. The model is being integrated into a mobile app for field researchers.",
       tags: ["Python", "TensorFlow", "CNN", "Transfer Learning", "AI"],
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&q=80&w=800",
+      image: "/lovable-uploads/Lichen-forest.jpg",
       link: "#",
       category: "AI"
     },
@@ -43,7 +43,7 @@ const Projects = () => {
       description: "Developed CNN algorithms to detect diseases in potato and tomato plants using computer vision techniques.",
       detailedDescription: "This agricultural AI project focuses on early detection of plant diseases to improve crop yield and reduce pesticide usage. I developed specialized CNN architectures to identify common diseases in potato plants (early blight, late blight, healthy) and tomato plants (bacterial spot, early blight, late blight, leaf mold, septoria leaf spot, spider mites, target spot, yellow leaf curl virus, mosaic virus, healthy). The system uses a multi-stage approach: first detecting the plant type, then applying disease-specific classifiers. Data augmentation techniques simulate various lighting conditions, angles, and disease progression stages. The model achieved 96% accuracy on potato disease detection and 93% on tomato diseases. I also implemented a mobile application using TensorFlow Lite for real-time field diagnosis, helping farmers make informed decisions about treatment strategies.",
       tags: ["Python", "CNN", "TensorFlow", "Computer Vision", "Agriculture"],
-      image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=800",
+      image: "/lovable-uploads/plant_leaf.jpg",
       link: "#",
       category: "AI"
     },
@@ -52,16 +52,16 @@ const Projects = () => {
       description: "Built a CNN to classify LoRa signal types by transforming time-series data into spectrograms.",
       detailedDescription: "This IoT and signal processing project develops intelligent classification systems for LoRa (Long Range) wireless communications. The system converts time-series LoRa signal data into spectrograms using Short-Time Fourier Transform (STFT), creating visual representations that capture both frequency and temporal characteristics. I designed a custom CNN architecture optimized for spectrogram analysis, incorporating attention mechanisms to focus on discriminative frequency patterns. The model classifies different LoRa spreading factors (SF7-SF12), bandwidths, and coding rates with 98% accuracy. Hyperparameter optimization using Bayesian optimization improved performance by 15%. The system also detects signal interference and estimates signal quality metrics. This work contributes to adaptive LoRa networks that can automatically optimize transmission parameters based on channel conditions.",
       tags: ["Python", "CNN", "LoRa", "Signal Processing", "AI"],
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&q=80&w=800",
+      image: "/lovable-uploads/Sin_wave.jpeg",
       link: "#",
       category: "AI"
     },
     {
-      title: "LHC Particle Collision Simulation (Ongoing)",
+      title: "Particle Collision Simulation",
       description: "Experimenting with Physics-Informed Neural Networks and GANs to simulate particle interactions in 3D space.",
       detailedDescription: "This cutting-edge physics simulation project combines deep learning with high-energy particle physics to model Large Hadron Collider (LHC) collision events. I'm developing Physics-Informed Neural Networks (PINNs) that incorporate fundamental physics laws (conservation of energy, momentum, charge) as constraints during training. The system uses Generative Adversarial Networks (GANs) to generate realistic particle collision events, learning from actual LHC data patterns. The 3D simulation environment models particle trajectories, decay processes, and detector responses using PyTorch and custom CUDA kernels for GPU acceleration. Current work focuses on simulating Higgs boson production and decay channels, with the goal of accelerating Monte Carlo simulations used in particle physics research. The project collaborates with CERN researchers and aims to reduce computational time for physics simulations by 100x while maintaining scientific accuracy.",
       tags: ["Python", "Physics-Informed NN", "GAN", "PyTorch", "CUDA", "Physics"],
-      image: "https://images.unsplash.com/photo-1636819488524-1f019c4e1c44?auto=format&fit=crop&q=80&w=800",
+      image: "/lovable-uploads/particle.jpg",
       link: "#",
       category: "Physics"
     }

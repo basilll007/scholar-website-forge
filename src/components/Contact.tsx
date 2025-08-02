@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ContactInfo from './contact/ContactInfo';
-import ContactForm from './contact/ContactForm';
+import SocialMediaLinks from './contact/SocialMediaLinks';
 
 const Contact = () => {
   return (
@@ -18,7 +18,7 @@ const Contact = () => {
             <ContactInfo />
           </div>
           <div>
-            <ContactForm />
+            <SocialMediaLinks />
           </div>
         </div>
       </div>
