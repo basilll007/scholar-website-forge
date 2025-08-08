@@ -40,7 +40,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="text-xl md:text-2xl font-serif font-semibold text-quantum-dark">
-          Researcher<span className="text-quantum-accent">.</span>
+          BTS<span className="text-quantum-accent">.</span>
         </a>
         
         {/* Desktop Navigation */}

@@ -15,13 +15,14 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
             <h1 className="text-5xl md:text-6xl font-serif font-bold leading-tight mb-4">
-            Driven by Curiosity
+              Driven by Curiosity
               <span className="text-quantum-accent"> Guided by Science</span>
               <span className="text-philosophy-DEFAULT"> Powered by AI</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-              I'm a graduate student driven by an insatiable thirst for knowledge—passionately exploring how artificial intelligence can transform diverse domains, from quantum physics to Bioinfomatics </p>
+              I'm Basil Tamil Selvan E., a graduate student driven by an insatiable thirst for knowledge—passionately exploring how artificial intelligence can transform diverse domains, from quantum physics to bioinformatics.
+            </p>
             <div className="flex flex-wrap gap-4">
               <Button
                 variant="default"

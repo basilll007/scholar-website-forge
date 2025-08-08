@@ -22,7 +22,7 @@ const ContactInfo: React.FC = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-1">Location</h4>
-            <p className="text-gray-600">Department of Applied Artificial Intelligence, Purdue University Northwest</p>
+            <p className="text-gray-600">College of Technology, Purdue Uniersity Northwest.</p>
           </div>
         </div>
       </div>

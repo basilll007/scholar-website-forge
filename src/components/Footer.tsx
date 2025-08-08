@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">
             <h3 className="text-2xl font-serif font-semibold mb-2">
-              Researcher<span className="text-quantum-accent">.</span>
+              BTS<span className="text-quantum-accent">.</span>
             </h3>
             <p className="text-gray-300 max-w-md">
               Exploring the intersections of quantum physics, artificial intelligence, and Tamil philosophy to expand our understanding of the universe.
