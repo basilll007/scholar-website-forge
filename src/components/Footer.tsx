@@ -11,10 +11,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">
             <h3 className="text-2xl font-serif font-semibold mb-2">
-              BTS<span className="text-quantum-accent">.</span>
+              BE<span className="text-quantum-accent">.</span>
             </h3>
             <p className="text-gray-300 max-w-md">
-              Exploring the intersections of quantum physics, artificial intelligence, and Tamil philosophy to expand our understanding of the universe.
+              Graduate researcher connecting RNA biology, computational genomics, and biomedical AI.
             </p>
           </div>
           
@@ -38,8 +38,8 @@ const Footer = () => {
             >
               <Linkedin className="h-5 w-5" />
             </a>
-            <a 
-              href="mailto:basiltamilselvan8@gmail.com" 
+            <a
+              href="mailto:ebasiltamilselvan@gmail.com"
                   target="_blank"
                   rel="noopener noreferrer"
               className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"

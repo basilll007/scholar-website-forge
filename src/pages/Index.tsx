@@ -6,7 +6,7 @@ import About from '@/components/About';
 import Research from '@/components/Research';
 import Projects from '@/components/Projects';
 import Achievements from '@/components/Achievements';
-// import Publications from '@/components/Publications';
+import Publications from '@/components/Publications';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
@@ -43,9 +43,9 @@ const Index = () => {
       <Hero />
       <About />
       <Research />
+      <Publications />
       <Projects />
       <Achievements />
-      {/* <Publications /> */}
       <Contact />
       <Footer />
       {/* <Analytics /> */}

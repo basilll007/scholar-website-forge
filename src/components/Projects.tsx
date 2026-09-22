@@ -12,58 +12,53 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Network Traffic Analyzer – Classification of Network Attacks",
-      description: "Designed a Random Forest-based classifier to detect and categorize various types of network attacks from packet data.",
-      detailedDescription: "This comprehensive network security project involved developing a sophisticated machine learning pipeline for real-time network threat detection. The system processes raw packet data captured through Wireshark, extracting key features such as packet size, protocol types, connection duration, and traffic patterns. The Random Forest classifier was trained on a diverse dataset containing normal traffic and various attack types including DDoS, port scanning, and intrusion attempts. The model achieved over 90% accuracy across different attack categories. Additionally, I built an interactive dashboard using Plotly and Streamlit that provides real-time visualization of network traffic, threat alerts, and detailed classification reports with confidence scores.",
-      tags: ["Python", "Random Forest", "Scikit-learn", "Wireshark", "Security"],
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
-      link: "#",
-      category: "Security"
-    },
-    {
-      title: "Lichen Image Classification Using Transfer Learning",
-      description: "Applied pre-trained CNNs to classify lichen species from raw image datasets using advanced transfer learning techniques.",
-      detailedDescription: "This biodiversity research project focuses on automated identification of lichen species using computer vision. I implemented transfer learning with pre-trained models including ResNet50, VGG16, and EfficientNet, fine-tuning them on a custom dataset of over 10,000 lichen images across 50+ species. To address class imbalance, I employed advanced data augmentation techniques including rotation, scaling, color jittering, and mixup. The final ensemble model achieved 94% accuracy on the test set. The research contributes to ecological monitoring and biodiversity assessment, with the paper currently under review for publication in the Journal of Computer Science and Agriculture. The model is being integrated into a mobile app for field researchers.",
-      tags: ["Python", "TensorFlow", "CNN", "Transfer Learning", "AI"],
-      image: "/lovable-uploads/Lichen-forest.jpg",
-      link: "#",
-      category: "AI"
-    },
-    {
-      title: "Brain Tumor Segmentation and Classification",
-      description: "Designed a 3D CNN to classify brain tumors from MRI scan volumes with integrated YOLOv5 for precise segmentation.",
-      detailedDescription: "This medical imaging project combines 3D convolutional neural networks with object detection for comprehensive brain tumor analysis. The system processes multi-modal MRI scans (T1, T1ce, T2, FLAIR) to classify tumor types (glioma, meningioma, pituitary) and perform precise segmentation. I implemented a custom 3D U-Net architecture for tumor segmentation, achieving a Dice coefficient of 0.87 on the BraTS dataset. The YOLOv5 integration enables real-time tumor detection and localization. The model was validated on benchmark datasets including BraTS 2020 and TCGA, demonstrating robust performance across different imaging protocols. The system includes uncertainty quantification to provide confidence measures for clinical decision support.",
-      tags: ["Python", "3D CNN", "YOLOv5", "PyTorch", "Medical"],
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=80&w=800",
-      link: "#",
-      category: "Medical"
-    },
-    {
-      title: "Plant Leaf Disease Detection",
-      description: "Developed CNN algorithms to detect diseases in potato and tomato plants using computer vision techniques.",
-      detailedDescription: "This agricultural AI project focuses on early detection of plant diseases to improve crop yield and reduce pesticide usage. I developed specialized CNN architectures to identify common diseases in potato plants (early blight, late blight, healthy) and tomato plants (bacterial spot, early blight, late blight, leaf mold, septoria leaf spot, spider mites, target spot, yellow leaf curl virus, mosaic virus, healthy). The system uses a multi-stage approach: first detecting the plant type, then applying disease-specific classifiers. Data augmentation techniques simulate various lighting conditions, angles, and disease progression stages. The model achieved 96% accuracy on potato disease detection and 93% on tomato diseases. I also implemented a mobile application using TensorFlow Lite for real-time field diagnosis, helping farmers make informed decisions about treatment strategies.",
-      tags: ["Python", "CNN", "TensorFlow", "Computer Vision", "Agriculture"],
+      title: "mApIt — Biomedical Literature Intelligence",
+      description: "AI platform that extracts, structures, and analyzes biomedical literature from PubMed and ClinicalTrials.gov to surface research trends and gaps.",
+      detailedDescription: "mApIt is an AI-powered platform developed as part of my graduate research at Purdue University Northwest, under Dr. Keyuan Jiang. It ingests large-scale biomedical literature from PubMed and ClinicalTrials.gov, applies hybrid rule-based and LLM techniques for author name disambiguation, and structures the extracted knowledge to identify research trends and gaps. The pipeline also generates publication-landscape executive summary PDFs for pharmaceutical clients.",
+      tags: ["Python", "LLMs", "NLP", "PubMed", "ClinicalTrials.gov"],
       image: "/lovable-uploads/plant_leaf.jpg",
-      link: "#",
-      category: "AI"
+      category: "Biomedical NLP"
     },
     {
-      title: "LoRa Signal Classification using CNN",
-      description: "Built a CNN to classify LoRa signal types by transforming time-series data into spectrograms.",
-      detailedDescription: "This IoT and signal processing project develops intelligent classification systems for LoRa (Long Range) wireless communications. The system converts time-series LoRa signal data into spectrograms using Short-Time Fourier Transform (STFT), creating visual representations that capture both frequency and temporal characteristics. I designed a custom CNN architecture optimized for spectrogram analysis, incorporating attention mechanisms to focus on discriminative frequency patterns. The model classifies different LoRa spreading factors (SF7-SF12), bandwidths, and coding rates with 98% accuracy. Hyperparameter optimization using Bayesian optimization improved performance by 15%. The system also detects signal interference and estimates signal quality metrics. This work contributes to adaptive LoRa networks that can automatically optimize transmission parameters based on channel conditions.",
-      tags: ["Python", "CNN", "LoRa", "Signal Processing", "AI"],
-      image: "/lovable-uploads/Sin_wave.jpeg",
-      link: "#",
-      category: "AI"
-    },
-    {
-      title: "Particle Collision Simulation",
-      description: "Experimenting with Physics-Informed Neural Networks and GANs to simulate particle interactions in 3D space.",
-      detailedDescription: "This cutting-edge physics simulation project combines deep learning with high-energy particle physics to model Large Hadron Collider (LHC) collision events. I'm developing Physics-Informed Neural Networks (PINNs) that incorporate fundamental physics laws (conservation of energy, momentum, charge) as constraints during training. The system uses Generative Adversarial Networks (GANs) to generate realistic particle collision events, learning from actual LHC data patterns. The 3D simulation environment models particle trajectories, decay processes, and detector responses using PyTorch and custom CUDA kernels for GPU acceleration. Current work focuses on simulating Higgs boson production and decay channels, with the goal of accelerating Monte Carlo simulations used in particle physics research. The project collaborates with CERN researchers and aims to reduce computational time for physics simulations by 100x while maintaining scientific accuracy.",
-      tags: ["Python", "Physics-Informed NN", "GAN", "PyTorch", "CUDA", "Physics"],
+      title: "m6A-SurvFormer",
+      description: "Cross-attention model over epitranscriptomic priors for survival prediction in lung adenocarcinoma. Spotlight presentation, PharML Workshop, ECML-PKDD 2026.",
+      detailedDescription: "m6A-SurvFormer incorporates biological priors — m6A epitranscriptomic modification sites — into a cross-attention architecture for robust survival prediction in lung adenocarcinoma. The work was accepted as a spotlight presentation at the PharML Workshop, ECML-PKDD 2026, demonstrating that grounding the model in known biological structure improves prediction robustness over purely data-driven baselines.",
+      tags: ["PyTorch", "Transformers", "Genomics", "Survival Analysis"],
       image: "/lovable-uploads/particle.jpg",
-      link: "#",
-      category: "Physics"
+      category: "Genomics"
+    },
+    {
+      title: "Remote Patient Monitoring for CHF",
+      description: "Clinical decision-support platform for congestive heart failure with role-based dashboards and rule-based alerting, built with Mayo Clinic.",
+      detailedDescription: "Co-authored with Mayo Clinic collaborators, this prototype platform supports earlier clinical detection of congestive heart failure decompensation. It features role-based (patient/nurse/admin) dashboards and rule-based clinical alert logic for weight change and SpO2 thresholds, built with Python + FastAPI, PostgreSQL, JWT authentication, and a React Native (Expo) frontend.",
+      tags: ["FastAPI", "PostgreSQL", "React Native", "Clinical AI"],
+      image: "/lovable-uploads/Sin_wave.jpeg",
+      category: "Clinical AI"
+    },
+    {
+      title: "Insight — Pharma Competitive Intelligence",
+      description: "Competitive intelligence tool that ingests and deduplicates competitor drug data from ClinicalTrials.gov and OpenFDA.",
+      detailedDescription: "Built during my AI/ML internship at Rarelife Solutions, Insight is a production AI/ML platform for pharmaceutical clients. It ingests, deduplicates, and structures competitor drug data sourced from ClinicalTrials.gov and OpenFDA to support competitive intelligence workflows.",
+      tags: ["Python", "AI/ML", "OpenFDA", "Data Pipelines"],
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=80&w=800",
+      category: "Biomedical AI"
+    },
+    {
+      title: "Lichen Image Classification",
+      description: "Image-based classifiers for on-site identification of lichen species in reserved forest. Published in Computers and Electronics in Agriculture (Elsevier).",
+      detailedDescription: "This biodiversity research project evaluates the effectiveness of image-based classifiers for field-ready, on-site identification of lichen species. The work was published in Computers and Electronics in Agriculture (Elsevier, 2025), contributing to ecological monitoring and biodiversity assessment.",
+      tags: ["Python", "TensorFlow", "CNN", "Computer Vision"],
+      image: "/lovable-uploads/Lichen-forest.jpg",
+      link: "https://doi.org/10.1016/j.compag.2025.110994",
+      category: "Computer Vision"
+    },
+    {
+      title: "Brain Tumor Classification — Undergraduate Research",
+      description: "3D CNN for volumetric brain tumor classification from MRI scans, with YOLOv5 integration for real-time localization.",
+      detailedDescription: "As undergraduate research at Anna University, I developed a volumetric segmentation model for MRI scans to classify brain tumors, integrating YOLOv5 for real-time localization. This project was also recognized with a Best Technical Presentation award at the Tech Expo Symposium.",
+      tags: ["Python", "3D CNN", "YOLOv5", "PyTorch"],
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
+      category: "Medical Imaging"
     }
   ];
 
@@ -75,7 +70,7 @@ const Projects = () => {
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h2 className="section-title">Research Projects</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            A showcase of my technical projects spanning machine learning, computer vision, network security, and signal processing, demonstrating practical applications of AI and data science methodologies.
+            Selected projects spanning biomedical NLP, computational genomics, and clinical AI.
           </p>
         </div>
         

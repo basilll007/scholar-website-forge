@@ -13,7 +13,7 @@ const ContactInfo: React.FC = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-1">Email</h4>
-            <p className="text-gray-600">basiltamilselvan8@gmail.com</p>
+            <p className="text-gray-600">ebasiltamilselvan@gmail.com</p>
           </div>
         </div>
         <div className="flex items-start">
@@ -22,7 +22,7 @@ const ContactInfo: React.FC = () => {
           </div>
           <div>
             <h4 className="font-semibold mb-1">Location</h4>
-            <p className="text-gray-600">College of Technology, Purdue Uniersity Northwest.</p>
+            <p className="text-gray-600">Purdue University Northwest — Greater Chicago Area</p>
           </div>
         </div>
       </div>

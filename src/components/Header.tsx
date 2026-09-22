@@ -26,6 +26,7 @@ const Header = () => {
   const menuItems = [
     { name: 'About', href: '/#about' },
     { name: 'Research', href: '/#research' },
+    { name: 'Publications', href: '/#publications' },
     { name: 'Projects', href: '/#projects' },
     { name: 'Achievements', href: '/#achievements' },
     { name: 'Contact', href: '/#contact' },
@@ -40,7 +41,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="text-xl md:text-2xl font-serif font-semibold text-quantum-dark">
-          BTS<span className="text-quantum-accent">.</span>
+          BE<span className="text-quantum-accent">.</span>
         </a>
         
         {/* Desktop Navigation */}
@@ -101,7 +102,7 @@ const Header = () => {
             size="lg" 
             className="border-quantum text-quantum hover:bg-quantum hover:text-white flex items-center gap-2 mt-4"
             onClick={() => {
-              window.open('/resume.pdf', '_blank');
+              window.open('/Basil_resume.pdf', '_blank');
               toggleMenu();
             }}
           >
