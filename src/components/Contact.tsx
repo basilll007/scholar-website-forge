@@ -10,7 +10,7 @@ const Contact = () => {
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h2 className="section-title">Get in Touch</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            I'm always interested in collaborating on research projects, speaking opportunities, or discussing ideas related to quantum physics, artificial intelligence, and Biology inquiry.
+            I'm always interested in collaborating on research in biomedical AI, RNA biology, and computational genomics, as well as PhD opportunities.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12">

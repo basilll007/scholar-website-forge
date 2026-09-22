@@ -7,36 +7,36 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 const Research = () => {
   const researchAreas = [
     {
-      id: "quantum",
-      title: "Quantum Physics",
-      description: "Exploring quantum mechanics, with a focus on quantum entanglement and information theory as they relate to fundamental physical phenomena. My research examines how quantum systems might reveal deeper patterns in reality that classical physics cannot capture.",
+      id: "genomics",
+      title: "RNA & Genomics",
+      description: "Computational methods that connect sequence-level molecular biology to clinical outcomes, shaped by biological structure rather than fitted to data alone.",
       topics: [
-        "Quantum Entanglement Applications",
-        "Quantum Information Processing",
-        "Foundations of Quantum Mechanics",
-        "Quantum Computing Algorithms"
+        "RNA Inverse Design",
+        "Epitranscriptomic Survival Prediction",
+        "Spatial Transcriptomics & Cell–Cell Communication",
+        "Graph-Learning Baselines (scGPT)"
       ]
     },
     {
-      id: "ai",
-      title: "Artificial Intelligence",
-      description: "Developing novel machine learning architectures inspired by both quantum processes and cognitive systems. My work explores how AI can help us model complex systems and potentially bridge the gap between quantum and classical domains.",
+      id: "biomedical-nlp",
+      title: "Biomedical NLP",
+      description: "AI systems for extracting, structuring, and retrieving knowledge from biomedical literature and clinical trial data.",
       topics: [
-        "Neural Network Architectures",
-        "Quantum-Inspired Algorithms",
-        "Explanable AI Systems",
-        "Cognitive Computing Models"
+        "Multimodal Biomedical Retrieval",
+        "Literature Mining (PubMed, ClinicalTrials.gov)",
+        "Author Name Disambiguation",
+        "LLM-Augmented Evidence Retrieval"
       ]
     },
     {
-      id: "interdisciplinary",
-      title: "Interdisciplinary Approaches",
-      description: "Creating frameworks that integrate methods and insights across disciplines. This research aims to develop new methodologies that allow for richer understanding of complex phenomena through intentional boundary-crossing.",
+      id: "clinical-ai",
+      title: "Clinical Decision Support",
+      description: "Prototype platforms that turn patient monitoring data into earlier, actionable clinical alerts in collaboration with clinicians.",
       topics: [
-        "Cross-domain Knowledge Transfer",
-        "Unified Theoretical Frameworks",
-        "Methodological Innovations",
-        "Conceptual Bridge Building"
+        "Remote Patient Monitoring",
+        "Rule-Based Clinical Alerting",
+        "Role-Based Care Dashboards",
+        "Care-Coordination Applications"
       ]
     }
   ];
@@ -47,7 +47,7 @@ const Research = () => {
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h2 className="section-title">Research Interests</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            My research sits at the intersection of several disciplines, combining rigorous scientific inquiry with philosophical depth to address fundamental questions about the nature of reality and intelligence.
+            My research spans RNA biology, computational genomics, and biomedical AI — connecting sequence-level molecular data to clinical outcomes.
           </p>
         </div>
         

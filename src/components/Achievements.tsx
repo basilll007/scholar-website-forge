@@ -9,56 +9,61 @@ const Achievements = () => {
 
   const achievements = [
     {
-      title: "Gold Medal – Best All-Rounder",
-      organization: "Kamaraj College of Engineering and Technology",
-      year: "2023–2024",
+      title: "Graduate Research Award",
+      organization: "Purdue University Northwest",
+      year: "2026",
       description: [
-        "Recognized for excellence in academics, leadership, and extracurriculars.",
-        "Awarded the institution's highest honor for all-round performance."
-      ],
-      icon: Medal,
-      color: "bg-yellow-500"
-    },
-    {
-      title: "Best Presentation Award – AI in Medical Imaging",
-      organization: "Tech Expo Symposium",
-      year: "2024",
-      description: [
-        "Presented a 3D CNN-based approach for brain tumor classification.",
-        "Recognized for technical clarity, depth, and research contribution."
+        "Awarded for research contributions in biomedical AI and computational genomics."
       ],
       icon: Award,
       color: "bg-blue-500"
     },
     {
-      title: "Best NCC Cadet",
-      organization: "National Cadet Corps (28TNBN Viruthunagar Unit)",
-      year: "2023",
+      title: "1st Place — BioNLP 2026 Shared Task",
+      organization: "Association for Computational Linguistics",
+      year: "2026",
       description: [
-        "Honored for outstanding discipline, leadership, and participation.",
-        "Selected as the top cadet across multiple institutions and events."
+        "Won the MedGenVidQA shared task with an LLM-augmented BM25 retrieval system for biomedical evidence."
       ],
       icon: Trophy,
       color: "bg-green-500"
     },
     {
-      title: "Invited Guest Lecturer – AI & Cloud Computing",
-      organization: "Kamaraj College of Engineering and Technology",
-      year: "2024",
+      title: "2nd Place — OmniRNA Discovery Challenge",
+      organization: "ECML PKDD, Naples, Italy",
+      year: "2026",
       description: [
-        "Delivered a session on AI fundamentals and real-world cloud applications.",
-        "Appreciated by faculty and students for engaging, insightful delivery."
+        "Placed 2nd internationally for a system addressing RNA function and design."
       ],
-      icon: Users,
+      icon: Medal,
       color: "bg-purple-500"
     },
     {
-      title: "Smart India Hackathon – Grand Finale Participant",
+      title: "Spotlight Presentation — PharML Workshop",
+      organization: "ECML PKDD",
+      year: "2026",
+      description: [
+        "Selected for spotlight presentation of m6A-SurvFormer, a survival-prediction model for lung adenocarcinoma."
+      ],
+      icon: Award,
+      color: "bg-indigo-500"
+    },
+    {
+      title: "Gold Medalist (Valedictorian)",
+      organization: "Anna University (Kamaraj College of Engineering and Technology)",
+      year: "2024",
+      description: [
+        "Ranked 1st of ~1,000 graduates; First Class with Distinction (87%)."
+      ],
+      icon: Medal,
+      color: "bg-yellow-500"
+    },
+    {
+      title: "National Finalist, Smart India Hackathon",
       organization: "Government of India",
       year: "2022",
       description: [
-        "Selected among top national teams for building a real-time AI-based network traffic analyzer.",
-        "Represented the college in the national-level grand finale."
+        "Selected among top national teams for rapid prototyping of AI solutions."
       ],
       icon: Trophy,
       color: "bg-orange-500"
@@ -70,10 +75,10 @@ const Achievements = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-quantum-dark mb-4">
-            🏆 Achievements & Honors
+            Achievements &amp; Honors
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Recognition for academic excellence, leadership, and contributions to research and technology
+            Recognition for research competitions, academic excellence, and leadership.
           </p>
         </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Award, GraduationCap, Activity, Users, Atom, Dna, Lightbulb, School, Briefcase, Code, Database, FileCode } from 'lucide-react';
+import { BookOpen, Award, GraduationCap, Users, Dna, Stethoscope, FlaskConical, School, Briefcase, Code, FileCode } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -10,96 +10,83 @@ const About = () => {
 
   const education = [
     {
-      degree: "MS in Applied Artificial Intelligence",
+      degree: "M.S. in Applied Artificial Intelligence",
       institution: "Purdue University Northwest",
-      period: "2025—2027",
+      period: "2025—Expected 2027",
       icon: <GraduationCap className="h-6 w-6 text-quantum-accent" />
     },
     {
-      degree: "B.E. in Computer Science",
+      degree: "B.E. in Computer Science & Engineering",
       institution: "Kamaraj College of Engineering and Technology",
       period: "2020—2024",
       icon: <BookOpen className="h-6 w-6 text-quantum-accent" />
-    },
-    {
-      degree: "Higher Secondary Education",
-      institution: "Don Bosco Higher Secondary School",
-      period: "2019—2020",
-      icon: <School className="h-6 w-6 text-quantum-accent" />
     }
   ];
 
   const achievements = [
     {
       icon: <Award className="h-8 w-8 text-quantum-accent" />,
-      title: "Academic Excellence",
-      description: "Maintained exceptional academic standing while pursuing advanced coursework and independent research initiatives."
+      title: "Gold Medalist, Anna University",
+      description: "Ranked 1st of ~1,000 graduates; First Class with Distinction (87%)."
     },
     {
-      icon: <Activity className="h-8 w-8 text-quantum-accent" />,
-      title: "Athletic Pursuits",
-      description: "Active basketball player, applying the discipline and strategic thinking from sports to academic challenges."
+      icon: <FlaskConical className="h-8 w-8 text-quantum-accent" />,
+      title: "Award-Winning Researcher",
+      description: "1st place, BioNLP 2026 Shared Task; 2nd place, OmniRNA Discovery Challenge, ECML PKDD."
     },
     {
       icon: <Users className="h-8 w-8 text-quantum-accent" />,
-      title: "NCC Cadet",
-      description: "Developed leadership, teamwork, and resilience as an active NCC cadet, values that translate to research collaboration."
+      title: "Senior Under Officer, NCC",
+      description: "Led a cadet battalion; recognized as Best Cadet for discipline and crisis management."
     },
     {
-      icon: <Lightbulb className="h-8 w-8 text-quantum-accent" />,
-      title: "Optimistic Innovator",
-      description: "Bringing an optimistic perspective to complex problems, seeking creative solutions at the intersection of disciplines."
+      icon: <Stethoscope className="h-8 w-8 text-quantum-accent" />,
+      title: "Founder, Applied AI Club",
+      description: "Built a student-led AI community at Purdue Northwest, organizing workshops and events."
     }
   ];
 
   const researchInterests = [
     {
-      icon: <Atom className="h-8 w-8 text-quantum-accent" />,
-      field: "AI & Quantum Physics",
-      description: "Exploring how artificial intelligence can enhance our understanding of quantum phenomena and develop new computational models."
+      icon: <Dna className="h-8 w-8 text-quantum-accent" />,
+      field: "RNA Biology & Computational Genomics",
+      description: "RNA inverse design, epitranscriptomic survival prediction, and spatial transcriptomics of cell–cell communication."
     },
     {
-      icon: <Dna className="h-8 w-8 text-quantum-accent" />,
-      field: "AI in Biology",
-      description: "Investigating applications of machine learning in biological systems, from protein folding to genomic analysis."
+      icon: <FlaskConical className="h-8 w-8 text-quantum-accent" />,
+      field: "Biomedical AI",
+      description: "Multimodal biomedical retrieval and NLP for structuring scientific literature and clinical knowledge."
     }
   ];
 
   const experience = [
     {
-      position: "AI Engineer",
+      position: "Graduate Research Assistant",
+      company: "Purdue University Northwest — Advisor: Dr. Keyuan Jiang",
+      period: "Sep 2025 – Present",
+      icon: <FileCode className="h-6 w-6 text-quantum-accent" />,
+      description: "Building AI-driven systems for biomedical knowledge extraction from PubMed and ClinicalTrials.gov, including mApIt and hybrid author name disambiguation.",
+    },
+    {
+      position: "Research Trainee",
+      company: "Mayo Clinic — Collaborative Project with PNW",
+      period: "2025 – Present",
+      icon: <Stethoscope className="h-6 w-6 text-quantum-accent" />,
+      description: "Building clinical decision-support tools: a Flutter/Firebase care-coordination app and a remote patient monitoring platform for congestive heart failure.",
+    },
+    {
+      position: "AI/ML Intern",
+      company: "Rarelife Solutions",
+      period: "May 2026 – Present",
+      icon: <Code className="h-6 w-6 text-quantum-accent" />,
+      description: "Building production AI/ML platforms for pharma clients, including a competitive intelligence tool over ClinicalTrials.gov and OpenFDA data.",
+    },
+    {
+      position: "AI Researcher (Computer Vision)",
       company: "H1 Enterprise",
       period: "Nov 2024 – Jun 2025",
-      icon: <FileCode className="h-6 w-6 text-quantum-accent" />,
-      description: "Led R&D on AI applications in agriculture, focusing on yield prediction and pest detection. Designed and developed an industrial chatbot that enhanced client query resolution efficiency.",
-    },
-    {
-      position: "AI Engineer",
-      company: "6F Tech Consultant",
-      period: "July 2024 - November 2024",
-      icon: <FileCode className="h-6 w-6 text-quantum-accent" />,
-      description: "Developed and deployed chatbot solutions using Python and Django. Collaborated with cross-functional teams to implement AI-powered features and ensure smooth integration with existing systems.",
-    },
-    {
-      position: "Software Developer Associate",
-      company: "AG Media",
-      period: "January 2024 - June 2024",
-      icon: <Code className="h-6 w-6 text-quantum-accent" />,
-      description: "Developed responsive websites using WordPress for various clients. Ensured timely delivery of projects while maintaining high quality standards and client satisfaction.",
-    },
-    {
-      position: "Data Science Intern",
-      company: "Coders Cave",
-      period: "August 2023",
-      icon: <Database className="h-6 w-6 text-quantum-accent" />,
-      description: "Explored various data science methodologies and techniques. Conducted Exploratory Data Analysis (EDA) on complex datasets and developed predictive models using machine learning algorithms.",
-    },
-    {
-      position: "Product Owner",
-      company: "Priga Solutions",
-      period: "January 2023 - July 2023", 
       icon: <Briefcase className="h-6 w-6 text-quantum-accent" />,
-      description: "Led a team of developers through the complete product lifecycle of the Grocy web application. Successfully launched the product, ensuring it met all specifications and user requirements.",
+      description: "Developed deep learning models for plant disease detection from leaf images, optimized for efficient inference in the field.",
     },
   ];
 
@@ -109,7 +96,7 @@ const About = () => {
         <div className="mb-16 text-center max-w-3xl mx-auto">
           <h2 className="section-title mb-6">About Me</h2>
           <p className="text-lg text-gray-700 leading-relaxed text-justify">
-            I'm a curious explorer at the intersection of artificial intelligence and fundamental sciences, currently pursuing my Master's in Applied AI at Purdue University Northwest. With a background in Computer Science and a passion for interdisciplinary research, I'm fascinated by how computational approaches can unlock new insights in quantum physics and biological systems. As both an academic and an athlete, I bring discipline, teamwork, and creative problem-solving to every challenge.
+            I'm a graduate researcher working at the intersection of RNA biology, computational genomics, and biomedical AI at Purdue University Northwest. My work spans RNA inverse design, epitranscriptomic survival prediction, and multimodal biomedical retrieval — building computational methods that are shaped by biological structure, not just fitted to biological data. I'm seeking a PhD to push this rigor further.
           </p>
         </div>
         
@@ -168,7 +155,7 @@ const About = () => {
           ))}
         </div>
         
-        <h3 className="text-xl font-semibold mb-6 text-center">Personal Strengths</h3>
+        <h3 className="text-xl font-semibold mb-6 text-center">Honors & Leadership</h3>
         <div ref={achievementsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {achievements.map((achievement, index) => (
             <Card 
@@ -213,7 +200,7 @@ const About = () => {
         <div className="mt-16 bg-quantum-light/5 p-8 rounded-lg border border-quantum-light/20">
           <div className="quote-box mx-auto max-w-3xl">
             <p className="text-lg italic">
-              "I believe the most fascinating discoveries emerge at the boundaries between disciplines. My goal is to bridge artificial intelligence with fundamental sciences, creating tools and insights that can transform our understanding of complex systems."
+              "I'm seeking a PhD to build rigorous computational methods that are shaped by biological structure rather than merely fitted to biological data."
             </p>
           </div>
         </div>
