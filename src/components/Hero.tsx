@@ -1,71 +1,82 @@
-
-import React from 'react';
-import { ChevronDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import React from "react";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-50 to-blue-50 pt-16">
-      <div className="absolute inset-0 z-0 opacity-10">
-        <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-quantum-accent/30 filter blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-philosophy-light/20 filter blur-3xl"></div>
-      </div>
+    <section id="top" className="pt-12 pb-12 sm:pt-16 sm:pb-14">
+      <div className="scholar-container">
+        <div className="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+          <img
+            src="/portrait.webp"
+            alt="Portrait of Basil Ebinesar"
+            width={128}
+            height={128}
+            className="w-28 h-28 sm:w-32 sm:h-32 rounded-md object-cover object-[50%_42%] shrink-0 border border-border bg-secondary"
+          />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold leading-tight mb-4">
-              Biomedical AI
-              <span className="text-quantum-accent"> &amp; Computational</span>
-              <span className="text-philosophy-DEFAULT"> Genomics</span>
+          <div className="min-w-0 flex-1">
+            <h1 className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-foreground">
+              Basil Ebinesar
             </h1>
-
-            <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-              I'm Basil Ebinesar, a graduate researcher at Purdue University Northwest building AI systems that connect RNA biology and genomics to clinical outcomes — from epitranscriptomic survival prediction to biomedical literature mining.
+            <p className="mt-1.5 text-sm sm:text-base text-muted-foreground">
+              M.S. Applied Artificial Intelligence, Purdue University Northwest · Greater Chicago Area
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button
-                variant="default"
-                className="bg-quantum-dark hover:bg-quantum text-white"
-                size="lg"
-                onClick={() => {
-                  const researchSection = document.getElementById('research');
-                  if (researchSection) researchSection.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                View Research
-              </Button>
+            <p className="mt-2 font-serif italic text-base sm:text-lg text-foreground/90 max-w-[68ch]">
+              Do computational scores of cell–cell communication reflect real tissue geometry, or merely shared expression?
+            </p>
 
-              <Button
-                variant="outline"
-                className="border-quantum-dark text-quantum-dark hover:bg-quantum-dark/10"
-                size="lg"
-                onClick={() => {
-                  const contactSection = document.getElementById('contact');
-                  if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
-                }}
+            <div className="mt-5 flex flex-wrap items-center gap-4">
+              <a
+                href="/Basil_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
               >
-                Connect
-              </Button>
-            </div>
-          </div>
+                <Download className="h-4 w-4" aria-hidden="true" />
+                Download CV
+              </a>
 
-          <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <div className="absolute inset-0 rounded-full border-2 border-quantum-accent/30 animate-pulse"></div>
-              <img
-                src="/lovable-uploads/bd1886ad-167d-4175-983d-6648a603bdc2.png"
-                alt="Profile"
-                className="w-full h-full object-cover rounded-full ring-4 ring-white shadow-lg"
-              />
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <a
+                  href="https://github.com/basilll007"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="inline-flex items-center gap-1.5 hover:text-foreground underline-offset-4 hover:underline transition-colors"
+                >
+                  <Github className="h-4 w-4" aria-hidden="true" />
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/basil-tamil-selvan-226b191bb/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="inline-flex items-center gap-1.5 hover:text-foreground underline-offset-4 hover:underline transition-colors"
+                >
+                  <Linkedin className="h-4 w-4" aria-hidden="true" />
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="mailto:ebasiltamilselvan@gmail.com"
+                  aria-label="Email"
+                  className="inline-flex items-center gap-1.5 hover:text-foreground underline-offset-4 hover:underline transition-colors"
+                >
+                  <Mail className="h-4 w-4" aria-hidden="true" />
+                  <span>Email</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <a href="#about" aria-label="Scroll down">
-            <ChevronDown size={32} className="text-quantum" />
-          </a>
+        <div className="mt-8 max-w-[70ch] space-y-4 text-base text-foreground/90 leading-relaxed">
+          <p>
+            I am a graduate researcher at Purdue University Northwest working on spatial transcriptomics and cell–cell communication, RNA/epitranscriptomics, and biomedical AI. Across my thesis and collaborative projects, the central thread is that computational methods in biology should be tested directly against biological structure—for instance, checking whether cells scored as "communicating" are actually neighbors in tissue.
+          </p>
+          <p>
+            My research spans spatially explicit null models for tumor microenvironments, cross-attention over epitranscriptomic priors for cancer survival prediction, and literature-intelligence and medical-agent systems. I am applying to computational biology PhD programs for Fall 2027.
+          </p>
         </div>
       </div>
     </section>

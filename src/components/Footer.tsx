@@ -1,65 +1,43 @@
-
-import React from 'react';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import React from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="bg-quantum-dark text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          <div className="mb-6 md:mb-0">
-            <h3 className="text-2xl font-serif font-semibold mb-2">
-              BE<span className="text-quantum-accent">.</span>
-            </h3>
-            <p className="text-gray-300 max-w-md">
-              Graduate researcher connecting RNA biology, computational genomics, and biomedical AI.
-            </p>
-          </div>
-          
-          <div className="flex space-x-4">
-            <a 
-              href="https://github.com/basilll007" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              aria-label="Github"
-            >
-              <Github className="h-5 w-5" />
-            </a>
 
-            <a 
-              href="https://www.linkedin.com/in/basil-tamil-selvan-226b191bb/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a
-              href="mailto:ebasiltamilselvan@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-              className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="h-5 w-5" />
-            </a>
-          </div>
-        </div>
-        
-        <hr className="border-white/20 my-6" />
-        
-        <div className="flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm">
-          <p>© {currentYear} All Rights Reserved.</p>
-          
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
-          </div>
+  return (
+    <footer className="border-t border-border py-8 text-xs text-muted-foreground">
+      <div className="scholar-container flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <p>© {currentYear} Basil Ebinesar</p>
+        <div className="flex items-center gap-5">
+          <a
+            href="/Basil_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground underline-offset-4 hover:underline transition-colors"
+          >
+            CV
+          </a>
+          <a
+            href="https://github.com/basilll007"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground underline-offset-4 hover:underline transition-colors"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/basil-tamil-selvan-226b191bb/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground underline-offset-4 hover:underline transition-colors"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="mailto:ebasiltamilselvan@gmail.com"
+            className="hover:text-foreground underline-offset-4 hover:underline transition-colors"
+          >
+            Email
+          </a>
         </div>
       </div>
     </footer>
